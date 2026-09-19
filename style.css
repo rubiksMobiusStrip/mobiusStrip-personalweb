@@ -1,5 +1,13 @@
 img {
-    width:200px
+    width:200px;
+    clip-path: circle(35%);
+    transform: rotate(0);
+    transition: transform 2.5s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+img:hover {
+    transform: rotate(360deg);    
+    transition: transform 1.5s ease-in-out;
 }
 
 body {
@@ -14,7 +22,18 @@ h1 {
     font-size: 60px;
 }
 
-a {
-    color: rgb(0, 134, 250);
+a:link, a:visited{
+    background-color: rgb(1, 21, 83);
+    color:white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
 }
 
+a:hover, a:active {
+    background-color: white;
+    color: rgb(1, 21, 83);
+    cursor: pointer;
+}
